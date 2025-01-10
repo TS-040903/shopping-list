@@ -32,6 +32,4 @@ sendInput.addEventListener('keydown', function(event) {
             item.classList.toggle('done');
         });
     }
-
-
-})
+});
