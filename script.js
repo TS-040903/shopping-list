@@ -16,6 +16,9 @@ sendInput.addEventListener('keydown', function(event) {
         const itemList = sendInput.value;
 
         const newItem = document.createElement('li');
+        newItem.addEventListener('click', function() {
+            newItem.classList.toggle('done');
+        });
         newItem.classList.add('items');
         newItem.textContent = itemList;
 
@@ -26,10 +29,4 @@ sendInput.addEventListener('keydown', function(event) {
         sendInput.value = '';
 
     }
-    const points = document.querySelectorAll('li');
-    for (let item of points) {
-        item.addEventListener('click', function() {
-            item.classList.toggle('done');
-        });
-    }
-});
+})
